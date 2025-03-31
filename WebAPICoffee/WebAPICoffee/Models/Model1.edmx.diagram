@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6b950f221ae446deb657fdd55690ffb1" Name="Diagram1" ZoomLevel="142">
+        <EntityTypeShape EntityType="CoffeeHouseModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeHouseModel.Заказы" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeHouseModel.Ингредиенты" Width="1.5" PointX="5.25" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeHouseModel.Меню" Width="1.5" PointX="5.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeHouseModel.ОтчетПерсонала" Width="1.5" PointX="8.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeHouseModel.Отчеты" Width="1.5" PointX="6" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeHouseModel.Платежи" Width="1.5" PointX="7.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeHouseModel.ПозицииЗаказа" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeHouseModel.Роль" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeHouseModel.СоставБлюда" Width="1.5" PointX="7.5" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeHouseModel.Сотрудники" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <AssociationConnector Association="CoffeeHouseModel.FK_Заказ_Сотрудник" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeHouseModel.FK_Платеж_Заказ" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeHouseModel.FK_ПозицииЗаказа_Заказ" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeHouseModel.FK_СоставБлюда_Ингредиент" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeHouseModel.FK_ПозицииЗаказа_Меню" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeHouseModel.FK_СоставБлюда_Меню" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeHouseModel.FK_ОтчетПерсонала_Отчет" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeHouseModel.FK_ОтчетПерсонала_Сотрудник" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeHouseModel.FK_Сотрудник_Роль" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

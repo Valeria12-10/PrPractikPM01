@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище CoffeeHouseModelContainer" CdmEntityContainer="CoffeeHouseEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="CoffeeHouseModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Заказы">
+      <EntityTypeMapping TypeName="CoffeeHouseModel.Заказы">
+        <MappingFragment StoreEntitySet="Заказы">
+          <ScalarProperty Name="IDЗаказа" ColumnName="IDЗаказа" />
+          <ScalarProperty Name="ТипЗаказа" ColumnName="ТипЗаказа" />
+          <ScalarProperty Name="Статус" ColumnName="Статус" />
+          <ScalarProperty Name="Номер_заказа" ColumnName="Номер_заказа" />
+          <ScalarProperty Name="ВремяСоздания" ColumnName="ВремяСоздания" />
+          <ScalarProperty Name="ВремяЗавершения" ColumnName="ВремяЗавершения" />
+          <ScalarProperty Name="ИтоговаяСумма" ColumnName="ИтоговаяСумма" />
+          <ScalarProperty Name="СпособОплаты" ColumnName="СпособОплаты" />
+          <ScalarProperty Name="КомментарийКлиента" ColumnName="КомментарийКлиента" />
+          <ScalarProperty Name="IDСотрудника" ColumnName="IDСотрудника" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ингредиенты">
+      <EntityTypeMapping TypeName="CoffeeHouseModel.Ингредиенты">
+        <MappingFragment StoreEntitySet="Ингредиенты">
+          <ScalarProperty Name="IDИнгредиента" ColumnName="IDИнгредиента" />
+          <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+          <ScalarProperty Name="ЕдиницаИзмерения" ColumnName="ЕдиницаИзмерения" />
+          <ScalarProperty Name="ТекущийОстаток" ColumnName="ТекущийОстаток" />
+          <ScalarProperty Name="МинимальныйЗапас" ColumnName="МинимальныйЗапас" />
+          <ScalarProperty Name="СебестоимостьЗаЕдиницу" ColumnName="СебестоимостьЗаЕдиницу" />
+          <ScalarProperty Name="Поставщик" ColumnName="Поставщик" />
+          <ScalarProperty Name="СрокГодности" ColumnName="СрокГодности" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Меню">
+      <EntityTypeMapping TypeName="CoffeeHouseModel.Меню">
+        <MappingFragment StoreEntitySet="Меню">
+          <ScalarProperty Name="IDТовара" ColumnName="IDТовара" />
+          <ScalarProperty Name="Название" ColumnName="Название" />
+          <ScalarProperty Name="Категория" ColumnName="Категория" />
+          <ScalarProperty Name="Описание" ColumnName="Описание" />
+          <ScalarProperty Name="Цена" ColumnName="Цена" />
+          <ScalarProperty Name="Доступность" ColumnName="Доступность" />
+          <ScalarProperty Name="ВремяПриготовления" ColumnName="ВремяПриготовления" />
+          <ScalarProperty Name="ФотоТовара" ColumnName="ФотоТовара" />
+          <ScalarProperty Name="ДатаДобавления" ColumnName="ДатаДобавления" />
+          <ScalarProperty Name="ДатаИзменения" ColumnName="ДатаИзменения" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ОтчетПерсонала">
+      <EntityTypeMapping TypeName="CoffeeHouseModel.ОтчетПерсонала">
+        <MappingFragment StoreEntitySet="ОтчетПерсонала">
+          <ScalarProperty Name="IDОтчета" ColumnName="IDОтчета" />
+          <ScalarProperty Name="IDСотрудника" ColumnName="IDСотрудника" />
+          <ScalarProperty Name="Показатели" ColumnName="Показатели" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Отчеты">
+      <EntityTypeMapping TypeName="CoffeeHouseModel.Отчеты">
+        <MappingFragment StoreEntitySet="Отчеты">
+          <ScalarProperty Name="IDОтчета" ColumnName="IDОтчета" />
+          <ScalarProperty Name="ТипОтчета" ColumnName="ТипОтчета" />
+          <ScalarProperty Name="НачалоПериода" ColumnName="НачалоПериода" />
+          <ScalarProperty Name="КонецПериода" ColumnName="КонецПериода" />
+          <ScalarProperty Name="ВремяФормирования" ColumnName="ВремяФормирования" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Платежи">
+      <EntityTypeMapping TypeName="CoffeeHouseModel.Платежи">
+        <MappingFragment StoreEntitySet="Платежи">
+          <ScalarProperty Name="IDПлатежа" ColumnName="IDПлатежа" />
+          <ScalarProperty Name="IDЗаказа" ColumnName="IDЗаказа" />
+          <ScalarProperty Name="Сумма" ColumnName="Сумма" />
+          <ScalarProperty Name="СтатусПлатежа" ColumnName="СтатусПлатежа" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ПозицииЗаказа">
+      <EntityTypeMapping TypeName="CoffeeHouseModel.ПозицииЗаказа">
+        <MappingFragment StoreEntitySet="ПозицииЗаказа">
+          <ScalarProperty Name="IDПозиции" ColumnName="IDПозиции" />
+          <ScalarProperty Name="IDЗаказа" ColumnName="IDЗаказа" />
+          <ScalarProperty Name="IDТовара" ColumnName="IDТовара" />
+          <ScalarProperty Name="Количество" ColumnName="Количество" />
+          <ScalarProperty Name="Модификация" ColumnName="Модификация" />
+          <ScalarProperty Name="ЦенаНаМомент" ColumnName="ЦенаНаМомент" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Роль">
+      <EntityTypeMapping TypeName="CoffeeHouseModel.Роль">
+        <MappingFragment StoreEntitySet="Роль">
+          <ScalarProperty Name="IDРоли" ColumnName="IDРоли" />
+          <ScalarProperty Name="Роль1" ColumnName="Роль" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="СоставБлюда">
+      <EntityTypeMapping TypeName="CoffeeHouseModel.СоставБлюда">
+        <MappingFragment StoreEntitySet="СоставБлюда">
+          <ScalarProperty Name="IDТовара" ColumnName="IDТовара" />
+          <ScalarProperty Name="IDИнгредиента" ColumnName="IDИнгредиента" />
+          <ScalarProperty Name="Количество" ColumnName="Количество" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Сотрудники">
+      <EntityTypeMapping TypeName="CoffeeHouseModel.Сотрудники">
+        <MappingFragment StoreEntitySet="Сотрудники">
+          <ScalarProperty Name="IDСотрудника" ColumnName="IDСотрудника" />
+          <ScalarProperty Name="ФИО" ColumnName="ФИО" />
+          <ScalarProperty Name="Роль" ColumnName="Роль" />
+          <ScalarProperty Name="Логин" ColumnName="Логин" />
+          <ScalarProperty Name="ХешПароля" ColumnName="ХешПароля" />
+          <ScalarProperty Name="ГрафикРаботы" ColumnName="ГрафикРаботы" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

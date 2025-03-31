@@ -1,0 +1,740 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище CoffeeHouseModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Заказы">
+          <Key>
+            <PropertyRef Name="IDЗаказа" />
+          </Key>
+          <Property Name="IDЗаказа" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ТипЗаказа" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Статус" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Номер_заказа" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ВремяСоздания" Type="date" Nullable="false" />
+          <Property Name="ВремяЗавершения" Type="date" />
+          <Property Name="ИтоговаяСумма" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="СпособОплаты" Type="nvarchar" MaxLength="50" />
+          <Property Name="КомментарийКлиента" Type="nvarchar" MaxLength="50" />
+          <Property Name="IDСотрудника" Type="int" />
+        </EntityType>
+        <EntityType Name="Ингредиенты">
+          <Key>
+            <PropertyRef Name="IDИнгредиента" />
+          </Key>
+          <Property Name="IDИнгредиента" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Наименование" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ЕдиницаИзмерения" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ТекущийОстаток" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="МинимальныйЗапас" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="СебестоимостьЗаЕдиницу" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Поставщик" Type="nvarchar" MaxLength="50" />
+          <Property Name="СрокГодности" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Меню">
+          <Key>
+            <PropertyRef Name="IDТовара" />
+          </Key>
+          <Property Name="IDТовара" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Название" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Категория" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Описание" Type="nvarchar" MaxLength="50" />
+          <Property Name="Цена" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Доступность" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ВремяПриготовления" Type="nvarchar" MaxLength="20" />
+          <Property Name="ФотоТовара" Type="nvarchar" MaxLength="50" />
+          <Property Name="ДатаДобавления" Type="date" Nullable="false" />
+          <Property Name="ДатаИзменения" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ОтчетПерсонала">
+          <Key>
+            <PropertyRef Name="IDОтчета" />
+            <PropertyRef Name="IDСотрудника" />
+          </Key>
+          <Property Name="IDОтчета" Type="int" Nullable="false" />
+          <Property Name="IDСотрудника" Type="int" Nullable="false" />
+          <Property Name="Показатели" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Отчеты">
+          <Key>
+            <PropertyRef Name="IDОтчета" />
+          </Key>
+          <Property Name="IDОтчета" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ТипОтчета" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="НачалоПериода" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="КонецПериода" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ВремяФормирования" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Платежи">
+          <Key>
+            <PropertyRef Name="IDПлатежа" />
+          </Key>
+          <Property Name="IDПлатежа" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDЗаказа" Type="int" Nullable="false" />
+          <Property Name="Сумма" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="СтатусПлатежа" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ПозицииЗаказа">
+          <Key>
+            <PropertyRef Name="IDПозиции" />
+          </Key>
+          <Property Name="IDПозиции" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDЗаказа" Type="int" Nullable="false" />
+          <Property Name="IDТовара" Type="int" Nullable="false" />
+          <Property Name="Количество" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Модификация" Type="nvarchar" MaxLength="50" />
+          <Property Name="ЦенаНаМомент" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Роль">
+          <Key>
+            <PropertyRef Name="IDРоли" />
+          </Key>
+          <Property Name="IDРоли" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Роль" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="СоставБлюда">
+          <Key>
+            <PropertyRef Name="IDТовара" />
+            <PropertyRef Name="IDИнгредиента" />
+          </Key>
+          <Property Name="IDТовара" Type="int" Nullable="false" />
+          <Property Name="IDИнгредиента" Type="int" Nullable="false" />
+          <Property Name="Количество" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Сотрудники">
+          <Key>
+            <PropertyRef Name="IDСотрудника" />
+          </Key>
+          <Property Name="IDСотрудника" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ФИО" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Роль" Type="int" Nullable="false" />
+          <Property Name="Логин" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ХешПароля" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="ГрафикРаботы" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <Association Name="FK_Заказ_Сотрудник">
+          <End Role="Сотрудники" Type="Self.Сотрудники" Multiplicity="0..1" />
+          <End Role="Заказы" Type="Self.Заказы" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Сотрудники">
+              <PropertyRef Name="IDСотрудника" />
+            </Principal>
+            <Dependent Role="Заказы">
+              <PropertyRef Name="IDСотрудника" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ОтчетПерсонала_Отчет">
+          <End Role="Отчеты" Type="Self.Отчеты" Multiplicity="1" />
+          <End Role="ОтчетПерсонала" Type="Self.ОтчетПерсонала" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Отчеты">
+              <PropertyRef Name="IDОтчета" />
+            </Principal>
+            <Dependent Role="ОтчетПерсонала">
+              <PropertyRef Name="IDОтчета" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ОтчетПерсонала_Сотрудник">
+          <End Role="Сотрудники" Type="Self.Сотрудники" Multiplicity="1" />
+          <End Role="ОтчетПерсонала" Type="Self.ОтчетПерсонала" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Сотрудники">
+              <PropertyRef Name="IDСотрудника" />
+            </Principal>
+            <Dependent Role="ОтчетПерсонала">
+              <PropertyRef Name="IDСотрудника" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Платеж_Заказ">
+          <End Role="Заказы" Type="Self.Заказы" Multiplicity="1" />
+          <End Role="Платежи" Type="Self.Платежи" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Заказы">
+              <PropertyRef Name="IDЗаказа" />
+            </Principal>
+            <Dependent Role="Платежи">
+              <PropertyRef Name="IDЗаказа" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ПозицииЗаказа_Заказ">
+          <End Role="Заказы" Type="Self.Заказы" Multiplicity="1" />
+          <End Role="ПозицииЗаказа" Type="Self.ПозицииЗаказа" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Заказы">
+              <PropertyRef Name="IDЗаказа" />
+            </Principal>
+            <Dependent Role="ПозицииЗаказа">
+              <PropertyRef Name="IDЗаказа" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ПозицииЗаказа_Меню">
+          <End Role="Меню" Type="Self.Меню" Multiplicity="1" />
+          <End Role="ПозицииЗаказа" Type="Self.ПозицииЗаказа" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Меню">
+              <PropertyRef Name="IDТовара" />
+            </Principal>
+            <Dependent Role="ПозицииЗаказа">
+              <PropertyRef Name="IDТовара" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_СоставБлюда_Ингредиент">
+          <End Role="Ингредиенты" Type="Self.Ингредиенты" Multiplicity="1" />
+          <End Role="СоставБлюда" Type="Self.СоставБлюда" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ингредиенты">
+              <PropertyRef Name="IDИнгредиента" />
+            </Principal>
+            <Dependent Role="СоставБлюда">
+              <PropertyRef Name="IDИнгредиента" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_СоставБлюда_Меню">
+          <End Role="Меню" Type="Self.Меню" Multiplicity="1" />
+          <End Role="СоставБлюда" Type="Self.СоставБлюда" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Меню">
+              <PropertyRef Name="IDТовара" />
+            </Principal>
+            <Dependent Role="СоставБлюда">
+              <PropertyRef Name="IDТовара" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Сотрудник_Роль">
+          <End Role="Роль" Type="Self.Роль" Multiplicity="1" />
+          <End Role="Сотрудники" Type="Self.Сотрудники" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Роль">
+              <PropertyRef Name="IDРоли" />
+            </Principal>
+            <Dependent Role="Сотрудники">
+              <PropertyRef Name="Роль" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище CoffeeHouseModelContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Заказы" EntityType="Self.Заказы" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ингредиенты" EntityType="Self.Ингредиенты" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Меню" EntityType="Self.Меню" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ОтчетПерсонала" EntityType="Self.ОтчетПерсонала" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Отчеты" EntityType="Self.Отчеты" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Платежи" EntityType="Self.Платежи" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ПозицииЗаказа" EntityType="Self.ПозицииЗаказа" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Роль" EntityType="Self.Роль" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="СоставБлюда" EntityType="Self.СоставБлюда" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Сотрудники" EntityType="Self.Сотрудники" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Заказ_Сотрудник" Association="Self.FK_Заказ_Сотрудник">
+            <End Role="Сотрудники" EntitySet="Сотрудники" />
+            <End Role="Заказы" EntitySet="Заказы" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ОтчетПерсонала_Отчет" Association="Self.FK_ОтчетПерсонала_Отчет">
+            <End Role="Отчеты" EntitySet="Отчеты" />
+            <End Role="ОтчетПерсонала" EntitySet="ОтчетПерсонала" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ОтчетПерсонала_Сотрудник" Association="Self.FK_ОтчетПерсонала_Сотрудник">
+            <End Role="Сотрудники" EntitySet="Сотрудники" />
+            <End Role="ОтчетПерсонала" EntitySet="ОтчетПерсонала" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Платеж_Заказ" Association="Self.FK_Платеж_Заказ">
+            <End Role="Заказы" EntitySet="Заказы" />
+            <End Role="Платежи" EntitySet="Платежи" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ПозицииЗаказа_Заказ" Association="Self.FK_ПозицииЗаказа_Заказ">
+            <End Role="Заказы" EntitySet="Заказы" />
+            <End Role="ПозицииЗаказа" EntitySet="ПозицииЗаказа" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ПозицииЗаказа_Меню" Association="Self.FK_ПозицииЗаказа_Меню">
+            <End Role="Меню" EntitySet="Меню" />
+            <End Role="ПозицииЗаказа" EntitySet="ПозицииЗаказа" />
+          </AssociationSet>
+          <AssociationSet Name="FK_СоставБлюда_Ингредиент" Association="Self.FK_СоставБлюда_Ингредиент">
+            <End Role="Ингредиенты" EntitySet="Ингредиенты" />
+            <End Role="СоставБлюда" EntitySet="СоставБлюда" />
+          </AssociationSet>
+          <AssociationSet Name="FK_СоставБлюда_Меню" Association="Self.FK_СоставБлюда_Меню">
+            <End Role="Меню" EntitySet="Меню" />
+            <End Role="СоставБлюда" EntitySet="СоставБлюда" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Сотрудник_Роль" Association="Self.FK_Сотрудник_Роль">
+            <End Role="Роль" EntitySet="Роль" />
+            <End Role="Сотрудники" EntitySet="Сотрудники" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CoffeeHouseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Заказы">
+          <Key>
+            <PropertyRef Name="IDЗаказа" />
+          </Key>
+          <Property Name="IDЗаказа" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ТипЗаказа" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Статус" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Номер_заказа" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ВремяСоздания" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ВремяЗавершения" Type="DateTime" Precision="0" />
+          <Property Name="ИтоговаяСумма" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="СпособОплаты" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="КомментарийКлиента" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDСотрудника" Type="Int32" />
+          <NavigationProperty Name="Сотрудники" Relationship="Self.FK_Заказ_Сотрудник" FromRole="Заказы" ToRole="Сотрудники" />
+          <NavigationProperty Name="Платежи" Relationship="Self.FK_Платеж_Заказ" FromRole="Заказы" ToRole="Платежи" />
+          <NavigationProperty Name="ПозицииЗаказа" Relationship="Self.FK_ПозицииЗаказа_Заказ" FromRole="Заказы" ToRole="ПозицииЗаказа" />
+        </EntityType>
+        <EntityType Name="Ингредиенты">
+          <Key>
+            <PropertyRef Name="IDИнгредиента" />
+          </Key>
+          <Property Name="IDИнгредиента" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Наименование" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ЕдиницаИзмерения" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ТекущийОстаток" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="МинимальныйЗапас" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="СебестоимостьЗаЕдиницу" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Поставщик" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="СрокГодности" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="СоставБлюда" Relationship="Self.FK_СоставБлюда_Ингредиент" FromRole="Ингредиенты" ToRole="СоставБлюда" />
+        </EntityType>
+        <EntityType Name="Меню">
+          <Key>
+            <PropertyRef Name="IDТовара" />
+          </Key>
+          <Property Name="IDТовара" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Название" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Категория" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Описание" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Цена" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Доступность" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ВремяПриготовления" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ФотоТовара" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ДатаДобавления" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ДатаИзменения" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="ПозицииЗаказа" Relationship="Self.FK_ПозицииЗаказа_Меню" FromRole="Меню" ToRole="ПозицииЗаказа" />
+          <NavigationProperty Name="СоставБлюда" Relationship="Self.FK_СоставБлюда_Меню" FromRole="Меню" ToRole="СоставБлюда" />
+        </EntityType>
+        <EntityType Name="ОтчетПерсонала">
+          <Key>
+            <PropertyRef Name="IDОтчета" />
+            <PropertyRef Name="IDСотрудника" />
+          </Key>
+          <Property Name="IDОтчета" Type="Int32" Nullable="false" />
+          <Property Name="IDСотрудника" Type="Int32" Nullable="false" />
+          <Property Name="Показатели" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Отчеты" Relationship="Self.FK_ОтчетПерсонала_Отчет" FromRole="ОтчетПерсонала" ToRole="Отчеты" />
+          <NavigationProperty Name="Сотрудники" Relationship="Self.FK_ОтчетПерсонала_Сотрудник" FromRole="ОтчетПерсонала" ToRole="Сотрудники" />
+        </EntityType>
+        <EntityType Name="Отчеты">
+          <Key>
+            <PropertyRef Name="IDОтчета" />
+          </Key>
+          <Property Name="IDОтчета" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ТипОтчета" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="НачалоПериода" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="КонецПериода" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ВремяФормирования" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="ОтчетПерсонала" Relationship="Self.FK_ОтчетПерсонала_Отчет" FromRole="Отчеты" ToRole="ОтчетПерсонала" />
+        </EntityType>
+        <EntityType Name="Платежи">
+          <Key>
+            <PropertyRef Name="IDПлатежа" />
+          </Key>
+          <Property Name="IDПлатежа" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDЗаказа" Type="Int32" Nullable="false" />
+          <Property Name="Сумма" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="СтатусПлатежа" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Заказы" Relationship="Self.FK_Платеж_Заказ" FromRole="Платежи" ToRole="Заказы" />
+        </EntityType>
+        <EntityType Name="ПозицииЗаказа">
+          <Key>
+            <PropertyRef Name="IDПозиции" />
+          </Key>
+          <Property Name="IDПозиции" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDЗаказа" Type="Int32" Nullable="false" />
+          <Property Name="IDТовара" Type="Int32" Nullable="false" />
+          <Property Name="Количество" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Модификация" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ЦенаНаМомент" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <NavigationProperty Name="Заказы" Relationship="Self.FK_ПозицииЗаказа_Заказ" FromRole="ПозицииЗаказа" ToRole="Заказы" />
+          <NavigationProperty Name="Меню" Relationship="Self.FK_ПозицииЗаказа_Меню" FromRole="ПозицииЗаказа" ToRole="Меню" />
+        </EntityType>
+        <EntityType Name="Роль">
+          <Key>
+            <PropertyRef Name="IDРоли" />
+          </Key>
+          <Property Name="IDРоли" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Роль1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Сотрудники" Relationship="Self.FK_Сотрудник_Роль" FromRole="Роль" ToRole="Сотрудники" />
+        </EntityType>
+        <EntityType Name="СоставБлюда">
+          <Key>
+            <PropertyRef Name="IDТовара" />
+            <PropertyRef Name="IDИнгредиента" />
+          </Key>
+          <Property Name="IDТовара" Type="Int32" Nullable="false" />
+          <Property Name="IDИнгредиента" Type="Int32" Nullable="false" />
+          <Property Name="Количество" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Ингредиенты" Relationship="Self.FK_СоставБлюда_Ингредиент" FromRole="СоставБлюда" ToRole="Ингредиенты" />
+          <NavigationProperty Name="Меню" Relationship="Self.FK_СоставБлюда_Меню" FromRole="СоставБлюда" ToRole="Меню" />
+        </EntityType>
+        <EntityType Name="Сотрудники">
+          <Key>
+            <PropertyRef Name="IDСотрудника" />
+          </Key>
+          <Property Name="IDСотрудника" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ФИО" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Роль" Type="Int32" Nullable="false" />
+          <Property Name="Логин" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ХешПароля" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ГрафикРаботы" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Заказы" Relationship="Self.FK_Заказ_Сотрудник" FromRole="Сотрудники" ToRole="Заказы" />
+          <NavigationProperty Name="ОтчетПерсонала" Relationship="Self.FK_ОтчетПерсонала_Сотрудник" FromRole="Сотрудники" ToRole="ОтчетПерсонала" />
+          <NavigationProperty Name="Роль1" Relationship="Self.FK_Сотрудник_Роль" FromRole="Сотрудники" ToRole="Роль" />
+        </EntityType>
+        <Association Name="FK_Заказ_Сотрудник">
+          <End Role="Сотрудники" Type="Self.Сотрудники" Multiplicity="0..1" />
+          <End Role="Заказы" Type="Self.Заказы" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Сотрудники">
+              <PropertyRef Name="IDСотрудника" />
+            </Principal>
+            <Dependent Role="Заказы">
+              <PropertyRef Name="IDСотрудника" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Платеж_Заказ">
+          <End Role="Заказы" Type="Self.Заказы" Multiplicity="1" />
+          <End Role="Платежи" Type="Self.Платежи" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Заказы">
+              <PropertyRef Name="IDЗаказа" />
+            </Principal>
+            <Dependent Role="Платежи">
+              <PropertyRef Name="IDЗаказа" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ПозицииЗаказа_Заказ">
+          <End Role="Заказы" Type="Self.Заказы" Multiplicity="1" />
+          <End Role="ПозицииЗаказа" Type="Self.ПозицииЗаказа" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Заказы">
+              <PropertyRef Name="IDЗаказа" />
+            </Principal>
+            <Dependent Role="ПозицииЗаказа">
+              <PropertyRef Name="IDЗаказа" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_СоставБлюда_Ингредиент">
+          <End Role="Ингредиенты" Type="Self.Ингредиенты" Multiplicity="1" />
+          <End Role="СоставБлюда" Type="Self.СоставБлюда" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ингредиенты">
+              <PropertyRef Name="IDИнгредиента" />
+            </Principal>
+            <Dependent Role="СоставБлюда">
+              <PropertyRef Name="IDИнгредиента" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ПозицииЗаказа_Меню">
+          <End Role="Меню" Type="Self.Меню" Multiplicity="1" />
+          <End Role="ПозицииЗаказа" Type="Self.ПозицииЗаказа" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Меню">
+              <PropertyRef Name="IDТовара" />
+            </Principal>
+            <Dependent Role="ПозицииЗаказа">
+              <PropertyRef Name="IDТовара" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_СоставБлюда_Меню">
+          <End Role="Меню" Type="Self.Меню" Multiplicity="1" />
+          <End Role="СоставБлюда" Type="Self.СоставБлюда" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Меню">
+              <PropertyRef Name="IDТовара" />
+            </Principal>
+            <Dependent Role="СоставБлюда">
+              <PropertyRef Name="IDТовара" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ОтчетПерсонала_Отчет">
+          <End Role="Отчеты" Type="Self.Отчеты" Multiplicity="1" />
+          <End Role="ОтчетПерсонала" Type="Self.ОтчетПерсонала" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Отчеты">
+              <PropertyRef Name="IDОтчета" />
+            </Principal>
+            <Dependent Role="ОтчетПерсонала">
+              <PropertyRef Name="IDОтчета" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ОтчетПерсонала_Сотрудник">
+          <End Role="Сотрудники" Type="Self.Сотрудники" Multiplicity="1" />
+          <End Role="ОтчетПерсонала" Type="Self.ОтчетПерсонала" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Сотрудники">
+              <PropertyRef Name="IDСотрудника" />
+            </Principal>
+            <Dependent Role="ОтчетПерсонала">
+              <PropertyRef Name="IDСотрудника" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Сотрудник_Роль">
+          <End Role="Роль" Type="Self.Роль" Multiplicity="1" />
+          <End Role="Сотрудники" Type="Self.Сотрудники" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Роль">
+              <PropertyRef Name="IDРоли" />
+            </Principal>
+            <Dependent Role="Сотрудники">
+              <PropertyRef Name="Роль" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CoffeeHouseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Заказы" EntityType="Self.Заказы" />
+          <EntitySet Name="Ингредиенты" EntityType="Self.Ингредиенты" />
+          <EntitySet Name="Меню" EntityType="Self.Меню" />
+          <EntitySet Name="ОтчетПерсонала" EntityType="Self.ОтчетПерсонала" />
+          <EntitySet Name="Отчеты" EntityType="Self.Отчеты" />
+          <EntitySet Name="Платежи" EntityType="Self.Платежи" />
+          <EntitySet Name="ПозицииЗаказа" EntityType="Self.ПозицииЗаказа" />
+          <EntitySet Name="Роль" EntityType="Self.Роль" />
+          <EntitySet Name="СоставБлюда" EntityType="Self.СоставБлюда" />
+          <EntitySet Name="Сотрудники" EntityType="Self.Сотрудники" />
+          <AssociationSet Name="FK_Заказ_Сотрудник" Association="Self.FK_Заказ_Сотрудник">
+            <End Role="Сотрудники" EntitySet="Сотрудники" />
+            <End Role="Заказы" EntitySet="Заказы" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Платеж_Заказ" Association="Self.FK_Платеж_Заказ">
+            <End Role="Заказы" EntitySet="Заказы" />
+            <End Role="Платежи" EntitySet="Платежи" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ПозицииЗаказа_Заказ" Association="Self.FK_ПозицииЗаказа_Заказ">
+            <End Role="Заказы" EntitySet="Заказы" />
+            <End Role="ПозицииЗаказа" EntitySet="ПозицииЗаказа" />
+          </AssociationSet>
+          <AssociationSet Name="FK_СоставБлюда_Ингредиент" Association="Self.FK_СоставБлюда_Ингредиент">
+            <End Role="Ингредиенты" EntitySet="Ингредиенты" />
+            <End Role="СоставБлюда" EntitySet="СоставБлюда" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ПозицииЗаказа_Меню" Association="Self.FK_ПозицииЗаказа_Меню">
+            <End Role="Меню" EntitySet="Меню" />
+            <End Role="ПозицииЗаказа" EntitySet="ПозицииЗаказа" />
+          </AssociationSet>
+          <AssociationSet Name="FK_СоставБлюда_Меню" Association="Self.FK_СоставБлюда_Меню">
+            <End Role="Меню" EntitySet="Меню" />
+            <End Role="СоставБлюда" EntitySet="СоставБлюда" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ОтчетПерсонала_Отчет" Association="Self.FK_ОтчетПерсонала_Отчет">
+            <End Role="Отчеты" EntitySet="Отчеты" />
+            <End Role="ОтчетПерсонала" EntitySet="ОтчетПерсонала" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ОтчетПерсонала_Сотрудник" Association="Self.FK_ОтчетПерсонала_Сотрудник">
+            <End Role="Сотрудники" EntitySet="Сотрудники" />
+            <End Role="ОтчетПерсонала" EntitySet="ОтчетПерсонала" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Сотрудник_Роль" Association="Self.FK_Сотрудник_Роль">
+            <End Role="Роль" EntitySet="Роль" />
+            <End Role="Сотрудники" EntitySet="Сотрудники" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище CoffeeHouseModelContainer" CdmEntityContainer="CoffeeHouseEntities">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="CoffeeHouseModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Заказы">
+            <EntityTypeMapping TypeName="CoffeeHouseModel.Заказы">
+              <MappingFragment StoreEntitySet="Заказы">
+                <ScalarProperty Name="IDЗаказа" ColumnName="IDЗаказа" />
+                <ScalarProperty Name="ТипЗаказа" ColumnName="ТипЗаказа" />
+                <ScalarProperty Name="Статус" ColumnName="Статус" />
+                <ScalarProperty Name="Номер_заказа" ColumnName="Номер_заказа" />
+                <ScalarProperty Name="ВремяСоздания" ColumnName="ВремяСоздания" />
+                <ScalarProperty Name="ВремяЗавершения" ColumnName="ВремяЗавершения" />
+                <ScalarProperty Name="ИтоговаяСумма" ColumnName="ИтоговаяСумма" />
+                <ScalarProperty Name="СпособОплаты" ColumnName="СпособОплаты" />
+                <ScalarProperty Name="КомментарийКлиента" ColumnName="КомментарийКлиента" />
+                <ScalarProperty Name="IDСотрудника" ColumnName="IDСотрудника" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ингредиенты">
+            <EntityTypeMapping TypeName="CoffeeHouseModel.Ингредиенты">
+              <MappingFragment StoreEntitySet="Ингредиенты">
+                <ScalarProperty Name="IDИнгредиента" ColumnName="IDИнгредиента" />
+                <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+                <ScalarProperty Name="ЕдиницаИзмерения" ColumnName="ЕдиницаИзмерения" />
+                <ScalarProperty Name="ТекущийОстаток" ColumnName="ТекущийОстаток" />
+                <ScalarProperty Name="МинимальныйЗапас" ColumnName="МинимальныйЗапас" />
+                <ScalarProperty Name="СебестоимостьЗаЕдиницу" ColumnName="СебестоимостьЗаЕдиницу" />
+                <ScalarProperty Name="Поставщик" ColumnName="Поставщик" />
+                <ScalarProperty Name="СрокГодности" ColumnName="СрокГодности" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Меню">
+            <EntityTypeMapping TypeName="CoffeeHouseModel.Меню">
+              <MappingFragment StoreEntitySet="Меню">
+                <ScalarProperty Name="IDТовара" ColumnName="IDТовара" />
+                <ScalarProperty Name="Название" ColumnName="Название" />
+                <ScalarProperty Name="Категория" ColumnName="Категория" />
+                <ScalarProperty Name="Описание" ColumnName="Описание" />
+                <ScalarProperty Name="Цена" ColumnName="Цена" />
+                <ScalarProperty Name="Доступность" ColumnName="Доступность" />
+                <ScalarProperty Name="ВремяПриготовления" ColumnName="ВремяПриготовления" />
+                <ScalarProperty Name="ФотоТовара" ColumnName="ФотоТовара" />
+                <ScalarProperty Name="ДатаДобавления" ColumnName="ДатаДобавления" />
+                <ScalarProperty Name="ДатаИзменения" ColumnName="ДатаИзменения" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ОтчетПерсонала">
+            <EntityTypeMapping TypeName="CoffeeHouseModel.ОтчетПерсонала">
+              <MappingFragment StoreEntitySet="ОтчетПерсонала">
+                <ScalarProperty Name="IDОтчета" ColumnName="IDОтчета" />
+                <ScalarProperty Name="IDСотрудника" ColumnName="IDСотрудника" />
+                <ScalarProperty Name="Показатели" ColumnName="Показатели" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Отчеты">
+            <EntityTypeMapping TypeName="CoffeeHouseModel.Отчеты">
+              <MappingFragment StoreEntitySet="Отчеты">
+                <ScalarProperty Name="IDОтчета" ColumnName="IDОтчета" />
+                <ScalarProperty Name="ТипОтчета" ColumnName="ТипОтчета" />
+                <ScalarProperty Name="НачалоПериода" ColumnName="НачалоПериода" />
+                <ScalarProperty Name="КонецПериода" ColumnName="КонецПериода" />
+                <ScalarProperty Name="ВремяФормирования" ColumnName="ВремяФормирования" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Платежи">
+            <EntityTypeMapping TypeName="CoffeeHouseModel.Платежи">
+              <MappingFragment StoreEntitySet="Платежи">
+                <ScalarProperty Name="IDПлатежа" ColumnName="IDПлатежа" />
+                <ScalarProperty Name="IDЗаказа" ColumnName="IDЗаказа" />
+                <ScalarProperty Name="Сумма" ColumnName="Сумма" />
+                <ScalarProperty Name="СтатусПлатежа" ColumnName="СтатусПлатежа" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ПозицииЗаказа">
+            <EntityTypeMapping TypeName="CoffeeHouseModel.ПозицииЗаказа">
+              <MappingFragment StoreEntitySet="ПозицииЗаказа">
+                <ScalarProperty Name="IDПозиции" ColumnName="IDПозиции" />
+                <ScalarProperty Name="IDЗаказа" ColumnName="IDЗаказа" />
+                <ScalarProperty Name="IDТовара" ColumnName="IDТовара" />
+                <ScalarProperty Name="Количество" ColumnName="Количество" />
+                <ScalarProperty Name="Модификация" ColumnName="Модификация" />
+                <ScalarProperty Name="ЦенаНаМомент" ColumnName="ЦенаНаМомент" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Роль">
+            <EntityTypeMapping TypeName="CoffeeHouseModel.Роль">
+              <MappingFragment StoreEntitySet="Роль">
+                <ScalarProperty Name="IDРоли" ColumnName="IDРоли" />
+                <ScalarProperty Name="Роль1" ColumnName="Роль" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="СоставБлюда">
+            <EntityTypeMapping TypeName="CoffeeHouseModel.СоставБлюда">
+              <MappingFragment StoreEntitySet="СоставБлюда">
+                <ScalarProperty Name="IDТовара" ColumnName="IDТовара" />
+                <ScalarProperty Name="IDИнгредиента" ColumnName="IDИнгредиента" />
+                <ScalarProperty Name="Количество" ColumnName="Количество" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Сотрудники">
+            <EntityTypeMapping TypeName="CoffeeHouseModel.Сотрудники">
+              <MappingFragment StoreEntitySet="Сотрудники">
+                <ScalarProperty Name="IDСотрудника" ColumnName="IDСотрудника" />
+                <ScalarProperty Name="ФИО" ColumnName="ФИО" />
+                <ScalarProperty Name="Роль" ColumnName="Роль" />
+                <ScalarProperty Name="Логин" ColumnName="Логин" />
+                <ScalarProperty Name="ХешПароля" ColumnName="ХешПароля" />
+                <ScalarProperty Name="ГрафикРаботы" ColumnName="ГрафикРаботы" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
