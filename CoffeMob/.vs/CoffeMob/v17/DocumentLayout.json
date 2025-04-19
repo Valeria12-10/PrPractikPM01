@@ -1,0 +1,235 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|c:\\users\\vip66\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\pm01\\coffemob\\coffemob\\coffemob\\mainpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|solutionrelative:coffemob\\coffemob\\mainpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|c:\\users\\vip66\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\pm01\\coffemob\\coffemob\\coffemob\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|solutionrelative:coffemob\\coffemob\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|c:\\users\\vip66\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\pm01\\coffemob\\coffemob\\coffemob\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|solutionrelative:coffemob\\coffemob\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|c:\\users\\vip66\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\pm01\\coffemob\\coffemob\\coffemob\\orderspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|solutionrelative:coffemob\\coffemob\\orderspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|c:\\users\\vip66\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\pm01\\coffemob\\coffemob\\coffemob\\orderspage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|solutionrelative:coffemob\\coffemob\\orderspage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|c:\\users\\vip66\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\pm01\\coffemob\\coffemob\\coffemob\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|solutionrelative:coffemob\\coffemob\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|c:\\users\\vip66\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\pm01\\coffemob\\coffemob\\coffemob\\cartpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|solutionrelative:coffemob\\coffemob\\cartpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|c:\\users\\vip66\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\pm01\\coffemob\\coffemob\\coffemob\\cartpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|solutionrelative:coffemob\\coffemob\\cartpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|c:\\users\\vip66\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\pm01\\coffemob\\coffemob\\coffemob\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|solutionrelative:coffemob\\coffemob\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|c:\\users\\vip66\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\pm01\\coffemob\\coffemob\\coffemob\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|solutionrelative:coffemob\\coffemob\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|c:\\users\\vip66\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\pm01\\coffemob\\coffemob\\coffemob\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}|CoffeMob\\CoffeMob\\CoffeMob.csproj|solutionrelative:coffemob\\coffemob\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 198,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\App.xaml.cs",
+              "RelativeDocumentMoniker": "CoffeMob\\CoffeMob\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\App.xaml.cs",
+              "RelativeToolTip": "CoffeMob\\CoffeMob\\App.xaml.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAmwCwAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T05:51:56.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrdersPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\OrdersPage.xaml.cs",
+              "RelativeDocumentMoniker": "CoffeMob\\CoffeMob\\OrdersPage.xaml.cs",
+              "ToolTip": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\OrdersPage.xaml.cs",
+              "RelativeToolTip": "CoffeMob\\CoffeMob\\OrdersPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T05:49:33.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "CoffeMob\\CoffeMob\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\MainPage.xaml.cs",
+              "RelativeToolTip": "CoffeMob\\CoffeMob\\MainPage.xaml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwAcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T05:48:28.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\MainPage.xaml",
+              "RelativeDocumentMoniker": "CoffeMob\\CoffeMob\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\MainPage.xaml",
+              "RelativeToolTip": "CoffeMob\\CoffeMob\\MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-19T05:48:00.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CartPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\CartPage.xaml.cs",
+              "RelativeDocumentMoniker": "CoffeMob\\CoffeMob\\CartPage.xaml.cs",
+              "ToolTip": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\CartPage.xaml.cs",
+              "RelativeToolTip": "CoffeMob\\CoffeMob\\CartPage.xaml.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T05:47:10.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\Product.cs",
+              "RelativeDocumentMoniker": "CoffeMob\\CoffeMob\\Product.cs",
+              "ToolTip": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\Product.cs",
+              "RelativeToolTip": "CoffeMob\\CoffeMob\\Product.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T05:44:56.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrdersPage.xaml",
+              "DocumentMoniker": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\OrdersPage.xaml",
+              "RelativeDocumentMoniker": "CoffeMob\\CoffeMob\\OrdersPage.xaml",
+              "ToolTip": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\OrdersPage.xaml",
+              "RelativeToolTip": "CoffeMob\\CoffeMob\\OrdersPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-19T05:44:44.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\Order.cs",
+              "RelativeDocumentMoniker": "CoffeMob\\CoffeMob\\Order.cs",
+              "ToolTip": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\Order.cs",
+              "RelativeToolTip": "CoffeMob\\CoffeMob\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T05:44:30.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Database.cs",
+              "DocumentMoniker": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\Database.cs",
+              "RelativeDocumentMoniker": "CoffeMob\\CoffeMob\\Database.cs",
+              "ToolTip": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\Database.cs",
+              "RelativeToolTip": "CoffeMob\\CoffeMob\\Database.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAIA5wDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T05:44:15.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CartPage.xaml",
+              "DocumentMoniker": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\CartPage.xaml",
+              "RelativeDocumentMoniker": "CoffeMob\\CoffeMob\\CartPage.xaml",
+              "ToolTip": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\CartPage.xaml",
+              "RelativeToolTip": "CoffeMob\\CoffeMob\\CartPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-19T05:44:02.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\CartItem.cs",
+              "RelativeDocumentMoniker": "CoffeMob\\CoffeMob\\CartItem.cs",
+              "ToolTip": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeMob\\CoffeMob\\CoffeMob\\CartItem.cs",
+              "RelativeToolTip": "CoffeMob\\CoffeMob\\CartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-19T05:43:30.5Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

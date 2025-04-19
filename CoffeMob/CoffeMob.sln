@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeMob.Android", "CoffeMob\CoffeMob.Android\CoffeMob.Android.csproj", "{F15BB8B2-9DCA-4016-BEA8-26D5F373E90D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeMob", "CoffeMob\CoffeMob\CoffeMob.csproj", "{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F15BB8B2-9DCA-4016-BEA8-26D5F373E90D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F15BB8B2-9DCA-4016-BEA8-26D5F373E90D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F15BB8B2-9DCA-4016-BEA8-26D5F373E90D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F15BB8B2-9DCA-4016-BEA8-26D5F373E90D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F15BB8B2-9DCA-4016-BEA8-26D5F373E90D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F15BB8B2-9DCA-4016-BEA8-26D5F373E90D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FA79E0F-4CD7-4D2D-8981-1AF2F44C1E83}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

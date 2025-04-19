@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoffeMob.MainPage" Title="Оформление заказа">
+    <StackLayout>
+        <ListView x:Name="ProductListView" ItemTapped="OnProductSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="" VerticalOptions="Center"/>
+                            <Label Text="{Binding Name}" VerticalOptions="Center"/>
+                            <Label Text="{Binding PricePerKg, StringFormat='Цена: {0:C}'}" VerticalOptions="Center"/>
+                            <Entry x:Name="QuantityEntry" Keyboard="Numeric" Placeholder="Количество" WidthRequest="60"/>
+                            <Button Text="Добавить" Clicked="OnAddToCartClicked" CommandParameter="{Binding .}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="Перейти в корзину" Clicked="OnGoToCartClicked"/>
+        <Button Text="Посмотреть заказы" Clicked="OnViewOrdersClicked"/>
+    </StackLayout>
+</ContentPage>

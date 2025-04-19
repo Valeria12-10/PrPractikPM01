@@ -1,0 +1,17 @@
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeMob\CoffeMob\CoffeMob\obj\Debug\netstandard2.0\CoffeMob.csproj.AssemblyReference.cache
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeMob\CoffeMob\CoffeMob\obj\Debug\netstandard2.0\CoffeMob.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeMob\CoffeMob\CoffeMob\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeMob\CoffeMob\CoffeMob\obj\Debug\netstandard2.0\CartPage.xaml.g.cs
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeMob\CoffeMob\CoffeMob\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeMob\CoffeMob\CoffeMob\obj\Debug\netstandard2.0\OrdersPage.xaml.g.cs
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeMob\CoffeMob\CoffeMob\obj\Debug\netstandard2.0\CoffeMob.AssemblyInfoInputs.cache
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeMob\CoffeMob\CoffeMob\obj\Debug\netstandard2.0\CoffeMob.AssemblyInfo.cs
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeMob\CoffeMob\CoffeMob\obj\Debug\netstandard2.0\CoffeMob.csproj.CoreCompileInputs.cache
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeMob\CoffeMob\CoffeMob\bin\Debug\netstandard2.0\CoffeMob.deps.json
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeMob\CoffeMob\CoffeMob\bin\Debug\netstandard2.0\CoffeMob.dll
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeMob\CoffeMob\CoffeMob\bin\Debug\netstandard2.0\ref\CoffeMob.dll
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeMob\CoffeMob\CoffeMob\bin\Debug\netstandard2.0\CoffeMob.pdb
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeMob\CoffeMob\CoffeMob\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeMob\CoffeMob\CoffeMob\obj\Debug\netstandard2.0\CoffeMob.dll
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeMob\CoffeMob\CoffeMob\obj\Debug\netstandard2.0\refint\CoffeMob.dll
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeMob\CoffeMob\CoffeMob\obj\Debug\netstandard2.0\CoffeMob.pdb
