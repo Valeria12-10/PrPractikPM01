@@ -1,0 +1,13 @@
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeeHouseLibrary\CoffeeHouseLibrary\bin\Debug\CoffeeHouseLibrary.dll.config
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeeHouseLibrary\CoffeeHouseLibrary\bin\Debug\CoffeeHouseLibrary.dll
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeeHouseLibrary\CoffeeHouseLibrary\bin\Debug\CoffeeHouseLibrary.pdb
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeeHouseLibrary\CoffeeHouseLibrary\bin\Debug\EntityFramework.dll
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeeHouseLibrary\CoffeeHouseLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeeHouseLibrary\CoffeeHouseLibrary\bin\Debug\EntityFramework.xml
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeeHouseLibrary\CoffeeHouseLibrary\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeeHouseLibrary\CoffeeHouseLibrary\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeeHouseLibrary\CoffeeHouseLibrary\obj\Debug\CoffeeHouseLibrary.csproj.AssemblyReference.cache
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeeHouseLibrary\CoffeeHouseLibrary\obj\Debug\CoffeeHouseLibrary.csproj.CoreCompileInputs.cache
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeeHouseLibrary\CoffeeHouseLibrary\obj\Debug\CoffeeHo.902126B4.Up2Date
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeeHouseLibrary\CoffeeHouseLibrary\obj\Debug\CoffeeHouseLibrary.dll
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeeHouseLibrary\CoffeeHouseLibrary\obj\Debug\CoffeeHouseLibrary.pdb

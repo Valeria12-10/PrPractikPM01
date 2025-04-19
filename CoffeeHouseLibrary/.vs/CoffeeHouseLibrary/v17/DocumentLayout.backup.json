@@ -1,0 +1,81 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeeHouseLibrary\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{633CE653-8900-4A7B-A9C5-970882DB383D}|CoffeeHouseLibrary\\CoffeeHouseLibrary.csproj|C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeeHouseLibrary\\coffeehouselibrary\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{633CE653-8900-4A7B-A9C5-970882DB383D}|CoffeeHouseLibrary\\CoffeeHouseLibrary.csproj|solutionrelative:coffeehouselibrary\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{633CE653-8900-4A7B-A9C5-970882DB383D}|CoffeeHouseLibrary\\CoffeeHouseLibrary.csproj|c:\\users\\vip66\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\pm01\\coffeehouselibrary\\coffeehouselibrary\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{633CE653-8900-4A7B-A9C5-970882DB383D}|CoffeeHouseLibrary\\CoffeeHouseLibrary.csproj|solutionrelative:coffeehouselibrary\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeeHouseLibrary\\CoffeeHouseLibrary\\Model1.edmx",
+              "RelativeDocumentMoniker": "CoffeeHouseLibrary\\Model1.edmx",
+              "ToolTip": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeeHouseLibrary\\CoffeeHouseLibrary\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "CoffeeHouseLibrary\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-04-17T02:07:30.667Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeeHouseLibrary\\CoffeeHouseLibrary\\Class1.cs",
+              "RelativeDocumentMoniker": "CoffeeHouseLibrary\\Class1.cs",
+              "ToolTip": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeeHouseLibrary\\CoffeeHouseLibrary\\Class1.cs",
+              "RelativeToolTip": "CoffeeHouseLibrary\\Class1.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAADwvzMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T02:06:10.032Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
