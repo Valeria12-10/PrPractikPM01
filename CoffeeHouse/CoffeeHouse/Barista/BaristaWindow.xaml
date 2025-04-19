@@ -1,0 +1,139 @@
+﻿<Window x:Class="CoffeeHouse.Barista.BaristaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoffeeHouse"
+        mc:Ignorable="d"
+        Title="CoffeeHouse - Бариста" 
+        Height="800" Width="1100"
+        WindowStartupLocation="CenterScreen"
+        Background="#FFF9F5F0">
+
+    <Window.Resources>
+        <!-- Стили для кнопок навигации -->
+        <Style x:Key="NavButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FF5D4037"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="15 10"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="4">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                              VerticalAlignment="Center"
+                                              Margin="{TemplateBinding Padding}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF8D6E63"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#FF3E2723"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Стиль для заголовка -->
+        <Style x:Key="HeaderTextStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FF5D4037"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="0 0 0 20"/>
+        </Style>
+
+        <!-- Стиль для карточек -->
+        <Style x:Key="CardStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="10" 
+                                    ShadowDepth="2" 
+                                    Opacity="0.1"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "241"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Левая панель навигации -->
+        <Border Grid.Column="0" Background="#FFA0876E" Padding="15">
+            <StackPanel>
+                <!-- Логотип и заголовок -->
+                <StackPanel Orientation="Horizontal" Margin="0 25 0 30" HorizontalAlignment="Center">
+                    <Image Source="/Image/cof.png" Width="70" Height="70" Margin="0 0 10 0"/>
+                    <TextBlock Text="Coffee House" 
+                               Foreground="#FF5D4037"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+
+
+
+                <!-- Навигационные кнопки -->
+                <StackPanel>
+                    <Button x:Name="PrepareDrinksButton" Content="Приготовление напитков" 
+                           
+                            Click="PrepareDrinksButton_Click"/>
+
+                    <Button x:Name="OrdersQueueButton" Content="Очередь заказов" 
+                            
+                            Margin="0 10 0 0"
+                            Click="OrdersQueueButton_Click"/>
+
+                    <Button x:Name="StatusChangeButton" Content="Изменение статусов" 
+                           
+                            Margin="0 10 0 0"
+                            Click="StatusChangeButton_Click"/>
+
+                    <Button x:Name="PreparationLogButton" Content="Журнал приготовлений" 
+                            
+                            Margin="0 10 0 0"
+                            Click="PreparationLogButton_Click" />
+                </StackPanel>
+
+                <!-- Подвал -->
+
+                <!-- Информация о пользователе -->
+                <Border Style="{StaticResource CardStyle}" Margin="0 248 0 20" Width="208">
+                    <StackPanel Margin="-5,0,-5,0">
+                        <TextBlock x:Name="UserRoleText" FontWeight="SemiBold" Foreground="#FF5D4037" Width="181"/>
+                        <TextBlock x:Name="UserFullNameText" Margin="0 5 0 0" Height="38"/>
+                        <TextBlock x:Name="UserScheduleText" Text="Cмена:" Foreground="#FF8D6E63" Margin="0 5 0 0"/>
+                        <Button Content="Выйти" Margin="0 10 0 0" 
+                 Background="Transparent" 
+                 Foreground="#FF5D4037"
+                 BorderBrush="#FF5D4037"
+                 BorderThickness="1"
+                 Padding="5"
+                 Click="LogoutButton_Click"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Border>
+
+        <!-- Правая часть - контент -->
+        <Border Grid.Column="1" Background="#FFCFC3B5" Padding="20">
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Navigated="MainFrame_Navigated" Margin="0,0,0,-10"/>
+        </Border>
+    </Grid>
+</Window>

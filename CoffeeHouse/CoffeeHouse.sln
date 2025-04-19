@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeHouse", "CoffeeHouse\CoffeeHouse.csproj", "{6F27457B-8D66-4096-BB7A-E01E2B1FFF81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest1", "UnitTest1\UnitTest1.csproj", "{E547F046-872C-460F-996E-8A467002CDAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F27457B-8D66-4096-BB7A-E01E2B1FFF81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F27457B-8D66-4096-BB7A-E01E2B1FFF81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F27457B-8D66-4096-BB7A-E01E2B1FFF81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F27457B-8D66-4096-BB7A-E01E2B1FFF81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E547F046-872C-460F-996E-8A467002CDAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E547F046-872C-460F-996E-8A467002CDAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E547F046-872C-460F-996E-8A467002CDAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E547F046-872C-460F-996E-8A467002CDAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

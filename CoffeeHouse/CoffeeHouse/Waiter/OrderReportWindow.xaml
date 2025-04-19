@@ -1,0 +1,74 @@
+﻿<Window x:Class="CoffeeHouse.Waiter.OrderReportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Отчет по заказам" Height="518" Width="800"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Name="ReportContent" Margin="10,10,10,-6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="92*"/>
+            <RowDefinition Height="345*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Отчет по заказам официанта" 
+               FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+
+        <StackPanel Orientation="Horizontal" Grid.RowSpan="2" Margin="0,32,0,10">
+            <TextBlock Text="Официант: " FontWeight="Bold" Height="27" Width="95"/>
+            <TextBlock x:Name="WaiterNameText" Margin="5 0 20 0"/>
+            <TextBlock Text="Период: " FontWeight="Bold" Height="19" Width="88"/>
+            <TextBlock x:Name="PeriodText"/>
+        </StackPanel>
+
+        <Grid Margin="0,10,0,10" Grid.RowSpan="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="19*"/>
+                <RowDefinition Height="24*"/>
+                <RowDefinition Height="104*"/>
+                <RowDefinition Height="288*"/>
+                <RowDefinition Height="43*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Background="#FFE3F2FD" CornerRadius="5" Padding="10" Margin="5,6,5,22" Grid.Row="2">
+                <StackPanel>
+                    <TextBlock Text="Всего заказов" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock x:Name="TotalOrdersText" FontSize="24" HorizontalAlignment="Center" Margin="0 5"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Column="1" Background="#FFE8F5E9" CornerRadius="5" Padding="10" Margin="5,6,5,22" Grid.Row="2">
+                <StackPanel>
+                    <TextBlock Text="Завершено" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock x:Name="CompletedOrdersText" FontSize="24" HorizontalAlignment="Center" Margin="0 5"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Column="2" Background="#FFF3E5F5" CornerRadius="5" Padding="10" Margin="5,6,5,22" Grid.Row="2">
+                <StackPanel>
+                    <TextBlock Text="Общая сумма" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <TextBlock x:Name="TotalAmountText" FontSize="24" HorizontalAlignment="Center" Margin="0 5"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+        <DataGrid x:Name="OrdersDataGrid" Margin="10,11,10,86" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="3">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер заказа" Binding="{Binding Номер_заказа}" Width="*"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding Статус}" Width="100"/>
+                <DataGridTextColumn Header="Время создания" Binding="{Binding ВремяСоздания, StringFormat={}{0:dd.MM.yyyy HH:mm}}" Width="*"/>
+                <DataGridTextColumn Header="Сумма" Binding="{Binding ИтоговаяСумма, StringFormat={}{0:N2} руб.}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,264,0,31" Width="210">
+            <Button Content="Печать" Width="100" Margin="0 0 10 0" Click="PrintReport_Click"/>
+            <Button Content="Закрыть" Width="100" Click="CloseWindow_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

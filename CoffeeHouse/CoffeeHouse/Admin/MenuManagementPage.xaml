@@ -1,0 +1,36 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:av="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="av" 
+    x:Class="CoffeeHouse.Admin.MenuManagementPage"
+      Title="MenuManagementPage">
+    <Grid Margin="10">
+        <StackPanel Margin="0,0,-14,0">
+            <TextBlock Text="Управление меню" FontSize="16" Margin="0 0 0 10"/>
+
+            <Border >
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                        <Button x:Name="AddItemButton" Content="Добавить" Padding="10 5" Click="AddItem_Click"/>
+                        <Button x:Name="EditItemButton" Content="Редактировать" Padding="10 5" Margin="10 0 0 0" Click="EditItem_Click"/>
+                        <Button x:Name="DeleteItemButton" Content="Удалить" Padding="10 5" Margin="10 0 0 0" Click="DeleteItem_Click"/>
+                    </StackPanel>
+
+                    <DataGrid x:Name="MenuItemsGrid" AutoGenerateColumns="False" CanUserAddRows="False" 
+                              SelectionMode="Single" SelectionUnit="FullRow" Margin="0 10 0 0"  >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding IDТовара}" Width="50"/>
+                            <DataGridTextColumn Header="Название" Binding="{Binding Название}" Width="150"/>
+                            <DataGridTextColumn Header="Категория" Binding="{Binding Категория}" Width="120"/>
+                            <DataGridTextColumn Header="Цена" Binding="{Binding Цена}" Width="80"/>
+                            <DataGridCheckBoxColumn Header="Доступность" Binding="{Binding Доступность}" Width="110"/>
+                            <DataGridTextColumn Header="Время приготовления" Binding="{Binding ВремяПриготовления}" Width="170"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>

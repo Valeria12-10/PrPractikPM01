@@ -1,0 +1,91 @@
+﻿<Page x:Class="CoffeeHouse.Manager.ManagerReportsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="ManagerReportsPage">
+    <Grid Margin="10">
+        <TabControl>
+            <TabItem Header="Продажи">
+                <StackPanel Margin="10">
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                        <DatePicker x:Name="SalesStartDate" Width="120" Margin="0 0 10 0"/>
+                        <DatePicker x:Name="SalesEndDate" Width="120" Margin="0 0 10 0"/>
+                        <ComboBox x:Name="SalesGroupingCombo" Width="150" Margin="0 0 10 0">
+                            <ComboBoxItem Content="По дням"/>
+                            <ComboBoxItem Content="По неделям"/>
+                            <ComboBoxItem Content="По месяцам"/>
+                        </ComboBox>
+                        <Button Content="Сформировать" Padding="10 5" Click="GenerateSalesReport_Click"/>
+                    </StackPanel>
+
+                    <DataGrid x:Name="SalesReportGrid" AutoGenerateColumns="False" Height="300">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Период" Binding="{Binding Период}" Width="120"/>
+                            <DataGridTextColumn Header="Кол-во заказов" Binding="{Binding КоличествоЗаказов}" Width="Auto"/>
+                            <DataGridTextColumn Header="Выручка" Binding="{Binding Выручка}" Width="100"/>
+                            <DataGridTextColumn Header="Средний чек" Binding="{Binding СреднийЧек}" Width="Auto"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <Button Content="Экспорт в Excel" Margin="0 10 0 0" HorizontalAlignment="Left" 
+                            Padding="10 5" Click="ExportToExcel_Click"/>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Товарные запасы">
+                <StackPanel Margin="10">
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                        <ComboBox x:Name="InventoryCategoryCombo" Width="200" Margin="0 0 10 0">
+                            <ComboBoxItem Content="Все категории"/>
+                            <ComboBoxItem Content="Кофе"/>
+                            <ComboBoxItem Content="Чай"/>
+                            <ComboBoxItem Content="Напитки"/>
+                            <ComboBoxItem Content="Выпечка"/>
+                            <ComboBoxItem Content="Десерты"/>
+                            
+                        </ComboBox>
+                        <Button Content="Сформировать" Padding="10 5" Click="GenerateInventoryReport_Click"/>
+                    </StackPanel>
+
+                    <DataGrid x:Name="InventoryReportGrid" AutoGenerateColumns="False" Height="300">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Товар" Binding="{Binding Товар}" Width="200"/>
+                            <DataGridTextColumn Header="Категория" Binding="{Binding Категория}" Width="120"/>
+                            <DataGridTextColumn Header="Остаток" Binding="{Binding Остаток}" Width="80"/>
+                            <DataGridTextColumn Header="Ед. изм." Binding="{Binding ЕдиницаИзмерения}" Width="80"/>
+                            <DataGridTextColumn Header="Ср. расход" Binding="{Binding СреднийРасход}" Width="80"/>
+                            <DataGridTextColumn Header="Дней хватит" Binding="{Binding ДнейХватит}" Width="80"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Заявки поставщикам">
+                <StackPanel Margin="10">
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                        <DatePicker x:Name="OrdersStartDate" Width="120" Margin="0 0 10 0"/>
+                        <DatePicker x:Name="OrdersEndDate" Width="120" Margin="0 0 10 0"/>
+                        <ComboBox x:Name="SupplierCombo" Width="200" Margin="0 0 10 0">
+                            <ComboBoxItem Content="Все поставщики"/>
+                            <ComboBoxItem Content="ООО 'Кофейные зерна'"/>
+                            <ComboBoxItem Content="ИП 'Молочные продукты'"/>
+                            <ComboBoxItem Content="ООО 'Сладкие сиропы'"/>
+                            <ComboBoxItem Content="ЗАО 'Кондитерские изделия'"/>
+                            <ComboBoxItem Content="ООО 'Пряности и специи'"/>
+                        </ComboBox>
+                        <Button Content="Сформировать" Padding="10 5" Click="GenerateSupplierOrdersReport_Click"/>
+                    </StackPanel>
+
+                    <DataGrid x:Name="SupplierOrdersReportGrid" AutoGenerateColumns="False" Height="300">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="№ заявки" Binding="{Binding НомерЗаявки}" Width="80"/>
+                            <DataGridTextColumn Header="Дата" Binding="{Binding Дата}" Width="100"/>
+                            <DataGridTextColumn Header="Поставщик" Binding="{Binding Поставщик}" Width="200"/>
+                            <DataGridTextColumn Header="Сумма" Binding="{Binding Сумма}" Width="100"/>
+                            <DataGridTextColumn Header="Статус" Binding="{Binding Статус}" Width="100"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>

@@ -1,0 +1,20 @@
+﻿CoffeeHouse
+
+
+winexe
+C#
+.cs
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeeHouse\CoffeeHouse\obj\Debug\
+CoffeeHouse
+none
+false
+DEBUG;TRACE
+C:\Users\vip66\OneDrive\Рабочий стол\PM01\CoffeeHouse\CoffeeHouse\App.xaml
+23-773724710
+2-1957146511
+421378300525
+361240028937
+Admin\AdminWindow.xaml;Admin\EditMenuItemWindow.xaml;Admin\EditUserWindow.xaml;Admin\MenuManagementPage.xaml;Admin\ReportsPage.xaml;Admin\SystemSettingsPage.xaml;Admin\UserManagementPage.xaml;Barista\OrdersQueuePage.xaml;Barista\PreparationLogPage.xaml;Barista\PrepareDrinksPage.xaml;Barista\StatusChangePage.xaml;MainWindow.xaml;Manager\AddSupplierOrderItemWindow.xaml;Manager\CreateSupplierOrderWindow.xaml;Manager\ManagerReportsPage.xaml;Manager\ManagerWindow.xaml;Barista\BaristaWindow.xaml;Manager\OrderDetailsWindow.xaml;Manager\OrdersControlPage.xaml;Manager\SelectIngredientWindow.xaml;Manager\SupplierOrdersPage.xaml;Waiter\OrderReportWindow.xaml;Waiter\WaiterWindow.xaml;
+
+False
+

@@ -1,0 +1,111 @@
+﻿<Page x:Class="CoffeeHouse.Barista.OrdersQueuePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      Title="OrdersQueuePage">
+
+    <Page.Resources>
+        <Style x:Key="OrderCardStyle" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="8"/>
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="Margin" Value="0,0,0,15"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="8" ShadowDepth="2" Opacity="0.1"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="TakeOrderButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FF5D4037"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="MinWidth" Value="120"/>
+        </Style>
+    </Page.Resources>
+
+    <ScrollViewer Margin="0,0,0,-203">
+        <StackPanel Margin="15">
+            <TextBlock Text="Очередь заказов" 
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Margin="0,0,0,15"
+                       Foreground="#FF5D4037"/>
+
+            <ItemsControl x:Name="OrdersQueueList" Height="1019">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Style="{StaticResource OrderCardStyle}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Информация о заказе -->
+                                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                                    <TextBlock Text="{Binding OrderNumber}" 
+                                               FontWeight="Bold"
+                                               FontSize="16"/>
+                                    <TextBlock Text="{Binding OrderTime}" 
+                                               Margin="10,0,0,0"
+                                               Foreground="Gray"/>
+                                    <TextBlock Text="{Binding OrderType}" 
+                                               Margin="10,0,0,0"
+                                               Foreground="#FF8D6E63"/>
+                                </StackPanel>
+
+                                <!-- Статус -->
+                                <Border Grid.Row="0" Grid.Column="1" 
+                                        Background="{Binding StatusColor}"
+                                        CornerRadius="4"
+                                        Padding="5,2">
+                                    <TextBlock Text="{Binding Status}" 
+                                               Foreground="White"
+                                               FontWeight="SemiBold"/>
+                                </Border>
+
+                                <!-- Список позиций -->
+                                <ItemsControl Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                                              ItemsSource="{Binding Items}"
+                                              Margin="0,10,0,0">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding}" 
+                                                       Margin="0,0,0,5"/>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+
+                                <!-- Комментарий -->
+                                <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+                                           Text="{Binding Comment}"
+                                           FontStyle="Italic"
+                                           Margin="0,10,0,0"
+                                           Foreground="Gray" />
+
+                                <!-- Кнопка взять в работу -->
+                                <Button Grid.Row="3" Grid.Column="1"
+                                        Content="Взять в работу"
+                                        Style="{StaticResource TakeOrderButtonStyle}"
+                                        Margin="0,15,0,0"
+                                        Visibility="{Binding CanTakeToWork}"
+                                        Click="TakeOrder_Click"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

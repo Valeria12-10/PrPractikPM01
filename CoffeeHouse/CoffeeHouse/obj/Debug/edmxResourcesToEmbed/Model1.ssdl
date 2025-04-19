@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище CoffeeHouseModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Заказы">
+    <Key>
+      <PropertyRef Name="IDЗаказа" />
+    </Key>
+    <Property Name="IDЗаказа" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ТипЗаказа" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Статус" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Номер_заказа" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ВремяСоздания" Type="date" Nullable="false" />
+    <Property Name="ВремяЗавершения" Type="date" />
+    <Property Name="ИтоговаяСумма" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="СпособОплаты" Type="nvarchar" MaxLength="50" />
+    <Property Name="КомментарийКлиента" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDСотрудника" Type="int" />
+  </EntityType>
+  <EntityType Name="Ингредиенты">
+    <Key>
+      <PropertyRef Name="IDИнгредиента" />
+    </Key>
+    <Property Name="IDИнгредиента" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Наименование" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ЕдиницаИзмерения" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ТекущийОстаток" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="МинимальныйЗапас" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="СебестоимостьЗаЕдиницу" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Поставщик" Type="nvarchar" MaxLength="50" />
+    <Property Name="СрокГодности" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Меню">
+    <Key>
+      <PropertyRef Name="IDТовара" />
+    </Key>
+    <Property Name="IDТовара" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Название" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Категория" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Описание" Type="nvarchar" MaxLength="50" />
+    <Property Name="Цена" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Доступность" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ВремяПриготовления" Type="nvarchar" MaxLength="20" />
+    <Property Name="ФотоТовара" Type="nvarchar" MaxLength="50" />
+    <Property Name="ДатаДобавления" Type="date" Nullable="false" />
+    <Property Name="ДатаИзменения" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ОтчетПерсонала">
+    <Key>
+      <PropertyRef Name="IDОтчета" />
+      <PropertyRef Name="IDСотрудника" />
+    </Key>
+    <Property Name="IDОтчета" Type="int" Nullable="false" />
+    <Property Name="IDСотрудника" Type="int" Nullable="false" />
+    <Property Name="Показатели" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Отчеты">
+    <Key>
+      <PropertyRef Name="IDОтчета" />
+    </Key>
+    <Property Name="IDОтчета" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ТипОтчета" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="НачалоПериода" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="КонецПериода" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ВремяФормирования" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Платежи">
+    <Key>
+      <PropertyRef Name="IDПлатежа" />
+    </Key>
+    <Property Name="IDПлатежа" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDЗаказа" Type="int" Nullable="false" />
+    <Property Name="Сумма" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="СтатусПлатежа" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ПозицииЗаказа">
+    <Key>
+      <PropertyRef Name="IDПозиции" />
+    </Key>
+    <Property Name="IDПозиции" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDЗаказа" Type="int" Nullable="false" />
+    <Property Name="IDТовара" Type="int" Nullable="false" />
+    <Property Name="Количество" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Модификация" Type="nvarchar" MaxLength="50" />
+    <Property Name="ЦенаНаМомент" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Роль">
+    <Key>
+      <PropertyRef Name="IDРоли" />
+    </Key>
+    <Property Name="IDРоли" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Название" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="СоставБлюда">
+    <Key>
+      <PropertyRef Name="IDТовара" />
+      <PropertyRef Name="IDИнгредиента" />
+    </Key>
+    <Property Name="IDТовара" Type="int" Nullable="false" />
+    <Property Name="IDИнгредиента" Type="int" Nullable="false" />
+    <Property Name="Количество" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Сотрудники">
+    <Key>
+      <PropertyRef Name="IDСотрудника" />
+    </Key>
+    <Property Name="IDСотрудника" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ФИО" Type="nvarchar" MaxLength="255" />
+    <Property Name="Логин" Type="nvarchar" MaxLength="255" />
+    <Property Name="ХешПароля" Type="nvarchar" MaxLength="255" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="ГрафикРаботы" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Роль" Type="int" />
+  </EntityType>
+  <Association Name="FK_Заказ_Сотрудник">
+    <End Role="Сотрудники" Type="Self.Сотрудники" Multiplicity="0..1" />
+    <End Role="Заказы" Type="Self.Заказы" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Сотрудники">
+        <PropertyRef Name="IDСотрудника" />
+      </Principal>
+      <Dependent Role="Заказы">
+        <PropertyRef Name="IDСотрудника" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ОтчетПерсонала_Отчет">
+    <End Role="Отчеты" Type="Self.Отчеты" Multiplicity="1" />
+    <End Role="ОтчетПерсонала" Type="Self.ОтчетПерсонала" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Отчеты">
+        <PropertyRef Name="IDОтчета" />
+      </Principal>
+      <Dependent Role="ОтчетПерсонала">
+        <PropertyRef Name="IDОтчета" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ОтчетПерсонала_Сотрудник">
+    <End Role="Сотрудники" Type="Self.Сотрудники" Multiplicity="1" />
+    <End Role="ОтчетПерсонала" Type="Self.ОтчетПерсонала" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Сотрудники">
+        <PropertyRef Name="IDСотрудника" />
+      </Principal>
+      <Dependent Role="ОтчетПерсонала">
+        <PropertyRef Name="IDСотрудника" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Платеж_Заказ">
+    <End Role="Заказы" Type="Self.Заказы" Multiplicity="1" />
+    <End Role="Платежи" Type="Self.Платежи" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Заказы">
+        <PropertyRef Name="IDЗаказа" />
+      </Principal>
+      <Dependent Role="Платежи">
+        <PropertyRef Name="IDЗаказа" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ПозицииЗаказа_Заказ">
+    <End Role="Заказы" Type="Self.Заказы" Multiplicity="1" />
+    <End Role="ПозицииЗаказа" Type="Self.ПозицииЗаказа" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Заказы">
+        <PropertyRef Name="IDЗаказа" />
+      </Principal>
+      <Dependent Role="ПозицииЗаказа">
+        <PropertyRef Name="IDЗаказа" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ПозицииЗаказа_Меню">
+    <End Role="Меню" Type="Self.Меню" Multiplicity="1" />
+    <End Role="ПозицииЗаказа" Type="Self.ПозицииЗаказа" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Меню">
+        <PropertyRef Name="IDТовара" />
+      </Principal>
+      <Dependent Role="ПозицииЗаказа">
+        <PropertyRef Name="IDТовара" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_СоставБлюда_Ингредиент">
+    <End Role="Ингредиенты" Type="Self.Ингредиенты" Multiplicity="1" />
+    <End Role="СоставБлюда" Type="Self.СоставБлюда" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ингредиенты">
+        <PropertyRef Name="IDИнгредиента" />
+      </Principal>
+      <Dependent Role="СоставБлюда">
+        <PropertyRef Name="IDИнгредиента" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_СоставБлюда_Меню">
+    <End Role="Меню" Type="Self.Меню" Multiplicity="1" />
+    <End Role="СоставБлюда" Type="Self.СоставБлюда" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Меню">
+        <PropertyRef Name="IDТовара" />
+      </Principal>
+      <Dependent Role="СоставБлюда">
+        <PropertyRef Name="IDТовара" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Сотрудник_Роль">
+    <End Role="Роль" Type="Self.Роль" Multiplicity="0..1" />
+    <End Role="Сотрудники" Type="Self.Сотрудники" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Роль">
+        <PropertyRef Name="IDРоли" />
+      </Principal>
+      <Dependent Role="Сотрудники">
+        <PropertyRef Name="Роль" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище CoffeeHouseModelContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Заказы" EntityType="Self.Заказы" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ингредиенты" EntityType="Self.Ингредиенты" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Меню" EntityType="Self.Меню" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ОтчетПерсонала" EntityType="Self.ОтчетПерсонала" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Отчеты" EntityType="Self.Отчеты" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Платежи" EntityType="Self.Платежи" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ПозицииЗаказа" EntityType="Self.ПозицииЗаказа" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Роль" EntityType="Self.Роль" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="СоставБлюда" EntityType="Self.СоставБлюда" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Сотрудники" EntityType="Self.Сотрудники" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Заказ_Сотрудник" Association="Self.FK_Заказ_Сотрудник">
+      <End Role="Сотрудники" EntitySet="Сотрудники" />
+      <End Role="Заказы" EntitySet="Заказы" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ОтчетПерсонала_Отчет" Association="Self.FK_ОтчетПерсонала_Отчет">
+      <End Role="Отчеты" EntitySet="Отчеты" />
+      <End Role="ОтчетПерсонала" EntitySet="ОтчетПерсонала" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ОтчетПерсонала_Сотрудник" Association="Self.FK_ОтчетПерсонала_Сотрудник">
+      <End Role="Сотрудники" EntitySet="Сотрудники" />
+      <End Role="ОтчетПерсонала" EntitySet="ОтчетПерсонала" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Платеж_Заказ" Association="Self.FK_Платеж_Заказ">
+      <End Role="Заказы" EntitySet="Заказы" />
+      <End Role="Платежи" EntitySet="Платежи" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ПозицииЗаказа_Заказ" Association="Self.FK_ПозицииЗаказа_Заказ">
+      <End Role="Заказы" EntitySet="Заказы" />
+      <End Role="ПозицииЗаказа" EntitySet="ПозицииЗаказа" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ПозицииЗаказа_Меню" Association="Self.FK_ПозицииЗаказа_Меню">
+      <End Role="Меню" EntitySet="Меню" />
+      <End Role="ПозицииЗаказа" EntitySet="ПозицииЗаказа" />
+    </AssociationSet>
+    <AssociationSet Name="FK_СоставБлюда_Ингредиент" Association="Self.FK_СоставБлюда_Ингредиент">
+      <End Role="Ингредиенты" EntitySet="Ингредиенты" />
+      <End Role="СоставБлюда" EntitySet="СоставБлюда" />
+    </AssociationSet>
+    <AssociationSet Name="FK_СоставБлюда_Меню" Association="Self.FK_СоставБлюда_Меню">
+      <End Role="Меню" EntitySet="Меню" />
+      <End Role="СоставБлюда" EntitySet="СоставБлюда" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Сотрудник_Роль" Association="Self.FK_Сотрудник_Роль">
+      <End Role="Роль" EntitySet="Роль" />
+      <End Role="Сотрудники" EntitySet="Сотрудники" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

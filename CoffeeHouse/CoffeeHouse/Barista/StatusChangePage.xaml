@@ -1,0 +1,87 @@
+﻿<Page x:Class="CoffeeHouse.Barista.StatusChangePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="Управление статусами заказов">
+
+    <Page.Resources>
+        <Style x:Key="CoffeeButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FF5D4037"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="MinWidth" Value="100"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок и кнопка обновления -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10" HorizontalAlignment="Stretch">
+            <TextBlock Text="Управление статусами заказов" 
+                       FontSize="18"
+                       FontWeight="Bold"
+                       Foreground="#FF5D4037"
+                       VerticalAlignment="Center"/>
+
+            <Button Content="Обновить данные"
+                   
+                    Margin="10,0,0,0"
+                    Click="RefreshButton_Click"
+                    HorizontalAlignment="Right"/>
+        </StackPanel>
+
+        <!-- Таблица заказов -->
+        <DataGrid x:Name="OrdersGrid"
+                  Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  Margin="10"
+                  SelectionMode="Single"
+                  IsReadOnly="True"
+                  ItemsSource="{Binding Orders}"
+                  SelectedItem="{Binding SelectedOrder}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер заказа" 
+                                    Binding="{Binding OrderNumber}" 
+                                    Width="1*"/>
+                <DataGridTextColumn Header="Тип заказа" 
+                                    Binding="{Binding OrderType}" 
+                                    Width="1.5*"/>
+                <DataGridTextColumn Header="Время создания" 
+                                    Binding="{Binding CreationTime}" 
+                                    Width="1.5*"/>
+                <DataGridTemplateColumn Header="Статус" Width="1.5*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ComboBox ItemsSource="{Binding AvailableStatuses}"
+                                      SelectedItem="{Binding Status, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                      VerticalAlignment="Center"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Действия" Width="Auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Обновить статус"
+                                    Click="UpdateStatus_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

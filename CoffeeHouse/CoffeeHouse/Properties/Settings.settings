@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CoffeeHouse.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CafeName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CoffeeHouse</Value>
+    </Setting>
+    <Setting Name="WorkingHours" Type="System.String" Scope="User">
+      <Value Profile="(Default)">08:00 - 22:00</Value>
+    </Setting>
+    <Setting Name="PhoneNumber" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+7 (123) 456-78-90</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

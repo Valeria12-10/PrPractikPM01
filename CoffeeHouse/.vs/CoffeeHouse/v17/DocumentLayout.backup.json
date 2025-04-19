@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeeHouse\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6F27457B-8D66-4096-BB7A-E01E2B1FFF81}|CoffeeHouse\\CoffeeHouse.csproj|c:\\users\\vip66\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\pm01\\coffeehouse\\coffeehouse\\admin\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F27457B-8D66-4096-BB7A-E01E2B1FFF81}|CoffeeHouse\\CoffeeHouse.csproj|solutionrelative:coffeehouse\\admin\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F27457B-8D66-4096-BB7A-E01E2B1FFF81}|CoffeeHouse\\CoffeeHouse.csproj|C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeeHouse\\coffeehouse\\waiter\\orderreportwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F27457B-8D66-4096-BB7A-E01E2B1FFF81}|CoffeeHouse\\CoffeeHouse.csproj|solutionrelative:coffeehouse\\waiter\\orderreportwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F27457B-8D66-4096-BB7A-E01E2B1FFF81}|CoffeeHouse\\CoffeeHouse.csproj|C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeeHouse\\coffeehouse\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F27457B-8D66-4096-BB7A-E01E2B1FFF81}|CoffeeHouse\\CoffeeHouse.csproj|solutionrelative:coffeehouse\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F27457B-8D66-4096-BB7A-E01E2B1FFF81}|CoffeeHouse\\CoffeeHouse.csproj|C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeeHouse\\coffeehouse\\admin\\systemsettingspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F27457B-8D66-4096-BB7A-E01E2B1FFF81}|CoffeeHouse\\CoffeeHouse.csproj|solutionrelative:coffeehouse\\admin\\systemsettingspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 209,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeeHouse\\CoffeeHouse\\Admin\\AdminWindow.xaml.cs",
+              "RelativeDocumentMoniker": "CoffeeHouse\\Admin\\AdminWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeeHouse\\CoffeeHouse\\Admin\\AdminWindow.xaml.cs",
+              "RelativeToolTip": "CoffeeHouse\\Admin\\AdminWindow.xaml.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAIA9wCEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T02:55:45.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderReportWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeeHouse\\CoffeeHouse\\Waiter\\OrderReportWindow.xaml.cs",
+              "RelativeDocumentMoniker": "CoffeeHouse\\Waiter\\OrderReportWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeeHouse\\CoffeeHouse\\Waiter\\OrderReportWindow.xaml.cs*",
+              "RelativeToolTip": "CoffeeHouse\\Waiter\\OrderReportWindow.xaml.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T02:55:35.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeeHouse\\CoffeeHouse\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "CoffeeHouse\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeeHouse\\CoffeeHouse\\MainWindow.xaml.cs",
+              "RelativeToolTip": "CoffeeHouse\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAIAwwDoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T02:54:00.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SystemSettingsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeeHouse\\CoffeeHouse\\Admin\\SystemSettingsPage.xaml.cs",
+              "RelativeDocumentMoniker": "CoffeeHouse\\Admin\\SystemSettingsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\vip66\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\PM01\\CoffeeHouse\\CoffeeHouse\\Admin\\SystemSettingsPage.xaml.cs",
+              "RelativeToolTip": "CoffeeHouse\\Admin\\SystemSettingsPage.xaml.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAD4v0kAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T00:46:28.502Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

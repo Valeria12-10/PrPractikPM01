@@ -1,0 +1,44 @@
+﻿<Page x:Class="CoffeeHouse.Manager.OrdersControlPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="OrdersControlPage">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Контроль заказов"/>
+
+            <Border>
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                        <ComboBox x:Name="StatusFilterComboBox" Width="150" Margin="0 0 10 0">
+                            <ComboBoxItem Content="Все заказы"/>
+                            <ComboBoxItem Content="в ожидании"/>
+                            <ComboBoxItem Content="в процессе"/>
+                            <ComboBoxItem Content="завершен"/>
+                        </ComboBox>
+                        <DatePicker x:Name="DateFromPicker" Width="120" Margin="0 0 10 0"/>
+                        <DatePicker x:Name="DateToPicker" Width="120" Margin="0 0 10 0"/>
+                        <Button Content="Фильтровать" Padding="10 5" Click="FilterOrders_Click"/>
+                    </StackPanel>
+
+                    <DataGrid x:Name="OrdersGrid" AutoGenerateColumns="False" Height="400">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding IDЗаказа}" Width="50"/>
+                            <DataGridTextColumn Header="Номер" Binding="{Binding Номер_заказа}" Width="100"/>
+                            <DataGridTextColumn Header="Статус" Binding="{Binding Статус}" Width="120"/>
+                            <DataGridTextColumn Header="Дата создания" Binding="{Binding ВремяСоздания}" Width="Auto"/>
+                            <DataGridTextColumn Header="Сумма" Binding="{Binding ИтоговаяСумма}" Width="100"/>
+                            <DataGridTextColumn Header="Способ оплаты" Binding="{Binding СпособОплаты}" Width="Auto"/>
+                            <DataGridTemplateColumn Header="Действия" Width="120">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Детали" Padding="5" Click="OrderDetails_Click"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>

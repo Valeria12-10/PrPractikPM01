@@ -1,0 +1,58 @@
+﻿<Page x:Class="CoffeeHouse.Admin.ReportsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="ReportsPage">
+    <Grid Margin="10">
+        <TabControl>
+            <TabItem Header="Продажи">
+                <StackPanel Margin="10">
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                        <DatePicker x:Name="StartDatePicker" Width="120" Margin="0 0 10 0"/>
+                        <DatePicker x:Name="EndDatePicker" Width="120" Margin="0 0 10 0"/>
+                        <ComboBox x:Name="ReportTypeComboBox" Width="150" Margin="0 0 10 0">
+                            <ComboBoxItem Content="По дням"/>
+                            <ComboBoxItem Content="По неделям"/>
+                            <ComboBoxItem Content="По месяцам"/>
+                        </ComboBox>
+                        <Button Content="Сформировать" Padding="10 5" Click="GenerateSalesReport_Click"/>
+                    </StackPanel>
+
+                    <DataGrid x:Name="SalesReportGrid" AutoGenerateColumns="False" Height="300">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Дата" Binding="{Binding Дата}" Width="180"/>
+                            <DataGridTextColumn Header="Количество заказов" Binding="{Binding Заказы}" Width="170"/>
+                            <DataGridTextColumn Header="Выручка" Binding="{Binding Выручка}" Width="100"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <Button Content="Экспорт в Excel" Margin="0 10 0 0" HorizontalAlignment="Left" 
+                            Padding="10 5" Click="ExportToExcel_Click"/>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Популярные товары">
+                <StackPanel Margin="10">
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                        <ComboBox x:Name="TopItemsComboBox" Width="200" Margin="0 0 10 0">
+                            <ComboBoxItem Content="ТОП-10 по количеству продаж"/>
+                            <ComboBoxItem Content="ТОП-10 по выручке"/>
+                            <ComboBoxItem Content="ТОП-10 по маржинальности"/>
+                            <ComboBoxItem Content="Наименее популярные"/>
+                        </ComboBox>
+                        <Button Content="Сформировать" Padding="10 5" Click="GenerateTopItemsReport_Click"/>
+                    </StackPanel>
+
+                    <DataGrid x:Name="TopItemsGrid" AutoGenerateColumns="False" Height="300">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Позиция" Binding="{Binding Позиция}" Width="100"/>
+                            <DataGridTextColumn Header="Название" Binding="{Binding Название}" Width="200"/>
+                            <DataGridTextColumn Header="Категория" Binding="{Binding Категория}" Width="120"/>
+                            <DataGridTextColumn Header="Количество продаж" Binding="{Binding Продажи}" Width="120"/>
+                            <DataGridTextColumn Header="Выручка" Binding="{Binding Выручка}" Width="100"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>

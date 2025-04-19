@@ -1,0 +1,65 @@
+﻿<Window x:Class="CoffeeHouse.Admin.EditMenuItemWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{Binding WindowTitle}" 
+        Height="645" Width="422"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+    <Grid Margin="10">
+        <StackPanel>
+            <!-- ID товара (только для чтения при редактировании) -->
+            <TextBlock Text="ID товара:" Margin="0 0 0 5" Visibility="{Binding IdVisibility}"/>
+            <TextBox x:Name="ItemIdTextBox" Margin="0 0 0 10" IsReadOnly="True" 
+                     Text="{Binding CurrentItem.IDТовара}" Visibility="{Binding IdVisibility}"/>
+
+            <!-- Название -->
+            <TextBlock Text="Название*:" Margin="0 0 0 5"/>
+            <TextBox x:Name="NameTextBox" Margin="0 0 0 10" Text="{Binding CurrentItem.Название}"/>
+
+            <!-- Категория -->
+            <TextBlock Text="Категория*:" Margin="0 0 0 5"/>
+            <ComboBox x:Name="CategoryComboBox" Margin="0 0 0 10" 
+                      ItemsSource="{Binding Categories}"
+                      SelectedItem="{Binding CurrentItem.Категория}"/>
+
+            <!-- Описание -->
+            <TextBlock Text="Описание:" Margin="0 0 0 5"/>
+            <TextBox x:Name="DescriptionTextBox" Margin="0 0 0 10" 
+                     Text="{Binding CurrentItem.Описание}" Height="60" 
+                     TextWrapping="Wrap" AcceptsReturn="True"/>
+
+            <!-- Цена -->
+            <TextBlock Text="Цена*:" Margin="0 0 0 5"/>
+            <TextBox x:Name="PriceTextBox" Margin="0 0 0 10" 
+                     Text="{Binding CurrentItem.Цена}"/>
+
+            <!-- Доступность -->
+            <CheckBox x:Name="AvailabilityCheckBox" Content="Доступен для заказа" 
+                      Margin="0 0 0 10" IsChecked="{Binding CurrentItem.Доступность}"/>
+
+            <!-- Время приготовления -->
+            <TextBlock Text="Время приготовления:" Margin="0 0 0 5"/>
+            <TextBox x:Name="PrepTimeTextBox" Margin="0 0 0 10" 
+                     Text="{Binding CurrentItem.ВремяПриготовления}"/>
+
+            <!-- Фото товара -->
+            <TextBlock Text="Фото товара:" Margin="0 0 0 5"/>
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <TextBox x:Name="PhotoPathTextBox" Width="288" 
+                         Text="{Binding CurrentItem.ФотоТовара}" IsReadOnly="True"/>
+                <Button Content="..." Margin="10 0 0 0" Width="101" Click="BrowsePhoto_Click"/>
+            </StackPanel>
+            <Image x:Name="ItemImage" Height="83" Margin="0 0 0 10" 
+                   Source="{Binding CurrentItem.ImageSource}" Stretch="Uniform" Width="108"/>
+
+            <!-- Кнопки -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="Отмена" Width="80" Margin="0 0 10 0" Click="Cancel_Click"/>
+                <Button Content="Сохранить" Width="128" Click="Save_Click"/>
+            </StackPanel>
+
+            <TextBlock Text="* - обязательные поля" Margin="0 10 0 0" 
+                       FontStyle="Italic" Foreground="Gray"/>
+        </StackPanel>
+    </Grid>
+</Window>
